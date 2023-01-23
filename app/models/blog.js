@@ -6,18 +6,13 @@ const BlogSchema = new Schema({
     title: String,
     sub_title: String,
     text: String,
+    author_id: String,
     cover_img: {
         type: String,
         default: "home-bg.jpg"
-    },
-    created_at: {
-        type: Date,
-        default: Date.now
-    }, 
-    updated_at: {
-        type: Date,
-        default: Date.now
     }
+}, {
+    timestamps: true
 });
 
 const Blog = mongoose.model('Blog', BlogSchema);
